@@ -1,0 +1,24 @@
+<div>
+  <h1>Angular Data Binding Examples</h1>
+
+  <!-- Interpolation Binding -->
+  <h2>Interpolation Binding</h2>
+  <p>Welcome, {{ username }}!</p>
+
+   <!-- Property Binding Example -->
+   <h2>Property Binding</h2>
+   <!-- Bind the input's value to the username property and update it on input -->
+   <p>
+     <input [value]="username" (input)="onUsernameInput($event)" placeholder="Enter your name" />
+   </p>
+   <p>The length of your name is: {{ username.length }}</p>
+   
+  <!-- Event Binding -->
+  <h2>Event Binding</h2>
+  <button (click)="sayHello()">Click Me</button>
+
+  <!-- Two-Way Binding -->
+  <h2>Two-Way Binding</h2>
+  <input type="text" [(ngModel)]="userInput" placeholder="Type something..." />
+  <p>You typed: {{ userInput }}</p>
+</div>

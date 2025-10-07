@@ -1,0 +1,22 @@
+nav {
+  background-color: #333; /* Dark background for navigation */
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav a.active {
+  background-color: #555; /* Background when active */
+}
+
+nav a:hover {
+  background-color: #777; /* Background on hover */
+  cursor: pointer; /* Ensure pointer shows on hover */
+}

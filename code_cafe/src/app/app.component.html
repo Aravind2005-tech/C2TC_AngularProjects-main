@@ -1,0 +1,13 @@
+<nav>
+    <a routerLink="/" routerLinkActive="active" role="button">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+</nav>
+  
+  <!-- Router outlet to load components based on the active route -->
+  <router-outlet></router-outlet>
+ 
+  <button (click)="navigateTo('')">Home</button>
+  <button (click)="navigateTo('products')">Go to Products</button>
+  <button (click)="navigateTo('about')">Go to About</button>
+ 

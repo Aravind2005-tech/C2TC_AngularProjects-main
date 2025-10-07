@@ -1,0 +1,32 @@
+<div>
+  <h1>Product Management</h1>
+
+  <!-- Add Product Form -->
+  <h3>Add New Product</h3>
+  <form (ngSubmit)="addProduct()">
+    <input type="text" [(ngModel)]="newProduct.name" name="name" placeholder="Product Name" required>
+    <input type="number" [(ngModel)]="newProduct.price" name="price" placeholder="Product Price" required>
+    <button type="submit">Add Product</button>
+  </form>
+
+  <!-- Edit Product Form -->
+  <div *ngIf="editProduct">
+    <h3>Edit Product</h3>
+    <form (ngSubmit)="updateProduct()">
+      <input type="text" [(ngModel)]="editProduct.name" name="editName" required>
+      <input type="number" [(ngModel)]="editProduct.price" name="editPrice" required>
+      <button type="submit">Update Product</button>
+      <button type="button" (click)="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Product List -->
+  <h3>Product List</h3>
+  <ul>
+    <li *ngFor="let product of products">
+      {{ product.name }} - ${{ product.price }}
+      <button (click)="deleteProduct(product.id)">Delete</button>
+      <button (click)="edit(product)">Edit</button>
+    </li>
+  </ul>
+</div>

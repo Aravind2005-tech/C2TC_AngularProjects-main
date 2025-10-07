@@ -1,0 +1,7 @@
+:host {
+    background-color:bisque; /* Light blue */
+    display: block;
+    height: 100vh; /* Make it full-height */
+    padding: 20px;
+  }
+  

@@ -1,0 +1,7 @@
+<div>
+    <h2>Parent Component</h2>
+    <input type="text" [(ngModel)]="parentData" placeholder="Enter data for child">
+    <!-- Listen to the event from child -->
+    <app-child [inputData]="parentData" (onNotify)="parentNotified()"></app-child>
+  </div>
+  

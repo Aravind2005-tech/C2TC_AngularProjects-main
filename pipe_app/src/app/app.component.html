@@ -1,0 +1,23 @@
+<div>
+  <h1>AngularJS Pipes Example</h1>
+
+  <!-- Built-in Date Pipe -->
+  <p>Formatted Date (Built-in): {{ currentDate | date:'fullDate' }}</p>
+
+  <!-- Number Pipe -->
+  <p>Original Number: {{ amount }}</p>
+  <p>Formatted Number: {{ amount | number:'1.2-2' }}</p>
+
+  <!-- Currency Pipe -->
+  <p>Original Price: {{ price }}</p>
+  <p>Formatted Price: {{ price | currency:'USD' }}</p>
+
+   <!-- Employee Table -->
+   <h2>Employee Details</h2>
+   <ul>
+     <li *ngFor="let employee of employees">
+       <!-- Custom Employee Designation Pipe -->
+       {{ employee | employeeDesignation }}
+     </li>
+   </ul>
+</div>
